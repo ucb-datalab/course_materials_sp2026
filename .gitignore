@@ -1,0 +1,40 @@
+.virtual_documents/
+.ipynb_checkpoints/
+lectures/Lecture09_SavioHPC/example/data/*
+
+*.pth
+training*.png
+.DS_Store
+__pycache__/
+office_hours/
+lectures/Archive/
+
+*~
+*.pyc
+*.aux
+*.log
+*.backup
+*.out
+foo.txt
+
+# Test and coverage
+.pytest_cache/
+__pycache__/
+.coverage
+htmlcov/
+*.cover
+
+# Data files
+*.pkl
+*.pickle
+# *.nc  # Now tracked with Git LFS (see .gitattributes)
+
+# Virtual environments
+.venv/
+.venv312/
+venv/
+env/
+
+.claude
+.codex
+lectures/.claude

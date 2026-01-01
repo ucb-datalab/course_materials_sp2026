@@ -1,0 +1,211 @@
+/*
+ * =============================================================================
+ * AY128 Course Notebook Styling
+ * =============================================================================
+ *
+ * This file is installed to ~/.jupyter/custom/custom.css by setup_env.sh
+ * Source: course_materials_sp2026/styles/ay128_custom.css
+ *
+ * For dynamic customization, use: from talktools import configure
+ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap');
+
+/* CSS Custom Properties - Default theme */
+:root {
+    --tt-primary: #498AF3;
+    --tt-secondary: #386BBC;
+    --tt-font-size: 120%;
+    --tt-bg: #ffffff;
+    --tt-text: #333333;
+    --tt-code-bg: #f5f5f5;
+    --tt-callout-bg: #f8f9fa;
+    --tt-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --tt-font-mono: 'Fira Code', 'SF Mono', Consolas, monospace;
+    --tt-radius: 8px;
+    --tt-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Base styles - works in both Jupyter Notebook and JupyterLab */
+.jp-RenderedHTMLCommon,
+.rendered_html {
+    font-family: var(--tt-font-sans);
+    font-size: var(--tt-font-size);
+    line-height: 1.6;
+    color: var(--tt-text);
+}
+
+/* Headers */
+.jp-RenderedHTMLCommon h1,
+.rendered_html h1 {
+    color: var(--tt-primary);
+    font-weight: 700;
+    font-size: 2.2em;
+    line-height: 1.2;
+    margin: 0.5em 0;
+    text-align: center;
+    border-bottom: 3px solid var(--tt-primary);
+    padding-bottom: 0.3em;
+}
+
+.jp-RenderedHTMLCommon h2,
+.rendered_html h2 {
+    color: var(--tt-secondary);
+    font-weight: 600;
+    font-size: 1.6em;
+    margin: 0.8em 0 0.4em;
+}
+
+.jp-RenderedHTMLCommon h3,
+.rendered_html h3 {
+    color: var(--tt-secondary);
+    font-weight: 600;
+    font-size: 1.3em;
+    margin: 0.8em 0 0.4em;
+}
+
+/* Code */
+.jp-RenderedHTMLCommon code,
+.rendered_html code {
+    font-family: var(--tt-font-mono);
+    background: var(--tt-code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.jp-RenderedHTMLCommon pre,
+.rendered_html pre {
+    background: var(--tt-code-bg);
+    padding: 1em;
+    border-radius: var(--tt-radius);
+    overflow-x: auto;
+}
+
+/* Custom classes */
+.talk_title {
+    color: var(--tt-primary);
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.subtitle {
+    color: var(--tt-secondary);
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0.5em 0 1em;
+}
+
+/* Talktools components */
+.tt-link {
+    color: var(--tt-primary);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.tt-link:hover {
+    border-bottom-color: var(--tt-primary);
+}
+
+.tt-embed {
+    margin: 1em 0;
+}
+
+.tt-embed-title {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.tt-embed iframe {
+    border-radius: var(--tt-radius);
+    box-shadow: var(--tt-shadow);
+}
+
+.tt-video {
+    text-align: center;
+}
+
+.tt-columns {
+    display: flex;
+    gap: 1.5em;
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+.tt-col {
+    flex: 1;
+}
+
+.tt-center {
+    text-align: center;
+}
+
+.tt-figure {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.tt-figure img {
+    max-width: 100%;
+    border-radius: var(--tt-radius);
+    box-shadow: var(--tt-shadow);
+}
+
+.tt-caption {
+    font-size: 0.9em;
+    color: var(--tt-secondary);
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+/* Callouts */
+.tt-callout {
+    background: var(--tt-callout-bg);
+    border-left: 4px solid var(--tt-primary);
+    border-radius: var(--tt-radius);
+    padding: 1em 1.5em;
+    margin: 1em 0;
+}
+
+.tt-callout-title {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.tt-callout-info { border-left-color: #3498db; }
+.tt-callout-warning { border-left-color: #f39c12; }
+.tt-callout-tip { border-left-color: #27ae60; }
+.tt-callout-note { border-left-color: #9b59b6; }
+
+/* Tables */
+.jp-RenderedHTMLCommon table,
+.rendered_html table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+}
+
+.jp-RenderedHTMLCommon th,
+.rendered_html th {
+    background: var(--tt-primary);
+    color: white;
+    padding: 0.75em 1em;
+    text-align: left;
+}
+
+.jp-RenderedHTMLCommon td,
+.rendered_html td {
+    padding: 0.75em 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.jp-RenderedHTMLCommon tr:hover,
+.rendered_html tr:hover {
+    background: var(--tt-callout-bg);
+}

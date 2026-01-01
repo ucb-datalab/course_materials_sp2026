@@ -1,0 +1,94 @@
+[project]
+name = "ay128"
+version = "0.1.0"
+description = "AY128 Course Materials - Spring 2026"
+requires-python = ">=3.12"
+
+dependencies = [
+    # Core scientific stack
+    "numpy<2.4",
+    "scipy>=1.16",
+    "pandas",
+    "matplotlib",
+    "scikit-learn>=1.8",
+    "scikit-image>=0.26",
+    "cython>=3.1.4",
+
+    # Deep learning
+    "torch",
+    "torchvision",
+    "pytorch-lightning",
+
+    # Jupyter & notebooks
+    "jupyterlab",
+    "notebook>=7",
+    "marimo>=0.8.14",
+    "ipython",
+    "ipywidgets",
+    "ipympl",
+    "ipyvolume",
+    "ipycanvas",
+    "ipyparallel",
+    "nbconvert[webpdf]",
+    "nb2pdf>=0.6.2",
+    "nbpdfexport>=0.2.1",
+
+    # Data & SQL
+    "jupysql",
+    "SQLAlchemy>=2.0.32",
+    "tables>=3.10.1",
+    "dask>=2024.8.1",
+    "dask-ml>=2024.4.4",
+    "distributed>=2024.8.1",
+    "xarray>=2024.7.0",
+
+    # Astronomy
+    "astropy>=6.1.2",
+    "astroquery>=0.4.7",
+    "dustmaps>=1.0.13",
+    "pyvo>=1.5.2",
+    "stsci.tools>=4.1.0",
+    "cartopy",
+
+    # Visualization
+    "altair>=5.4.0",
+    "vega>=3.0",
+    "vega3>=0.13.0",
+    "vega_datasets",
+    "bqplot>=0.12.43",
+    "corner>=2.2",
+    "pandas-bokeh",
+    "graphviz",
+    "pydot>=3.0.1",
+
+    # ML & Stats
+    "pymc>=5.16.2",
+    "umap-learn>=0.5.6",
+    "joblib>=1.4.2",
+
+    # Web & networking
+    "requests>=2.32.3",
+    "aiohttp>=3.10.4",
+    "urllib3",
+    "flask>=3.0.3",
+    "beautifulsoup4",
+
+    # Profiling & debugging
+    "line_profiler>=4.1.3",
+    "snakeviz>=2.2.0",
+    "memory_profiler>=0.61.0",
+
+    # Utilities
+    "opencv-python",
+    "tqdm",
+    "protobuf",
+    "pytz>=2024.1",
+    "click",
+    "fire",
+    "twine",
+    "watermark",
+]
+
+[tool.uv]
+# Use PyTorch index for CUDA builds if needed
+# extra-index-url = ["https://download.pytorch.org/whl/cu121"]
