@@ -4,6 +4,32 @@ set -e
 
 echo "Setting up AY128 environment with uv..."
 
+# Check for required system dependencies
+echo "Checking system dependencies..."
+
+# Check for PROJ (required by cartopy/pyproj)
+if ! command -v proj &> /dev/null; then
+    echo ""
+    echo "ERROR: PROJ library not found."
+    echo ""
+    echo "The cartopy package requires PROJ to be installed at the system level."
+    echo ""
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        echo "On macOS, install it with Homebrew:"
+        echo "    brew install proj"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        echo "On Ubuntu/Debian:"
+        echo "    sudo apt-get install libproj-dev proj-bin"
+        echo ""
+        echo "On Fedora/RHEL:"
+        echo "    sudo dnf install proj-devel"
+    fi
+    echo ""
+    echo "After installing PROJ, re-run this script."
+    exit 1
+fi
+echo "  ✓ PROJ found"
+
 # Create virtual environment with Python 3.12
 uv venv --python 3.12 --prompt ay128
 source .venv/bin/activate
