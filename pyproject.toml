@@ -51,6 +51,7 @@ dependencies = [
     "cartopy",
 
     # Visualization
+    "seaborn",
     "altair>=5.4.0",
     "vega>=3.0",
     "vega3>=0.13.0",
