@@ -18,6 +18,8 @@ dependencies = [
     "torch",
     "torchvision",
     "pytorch-lightning",
+    "jax",
+    "optax",
 
     # Jupyter & notebooks
     "jupyterlab",
@@ -66,6 +68,7 @@ dependencies = [
     "pymc>=5.16.2",
     "umap-learn>=0.5.6",
     "joblib>=1.4.2",
+    "linsolve",
 
     # Web & networking
     "requests>=2.32.3",
