@@ -49,6 +49,25 @@ You may wish to work directly from your laptop. We use [uv](https://docs.astral.
  uv pip install -r requirements.txt
  ```
 
+ ### Savio Environment
+
+Follow these instructions to set up your environment on the Savio cluster.
+
+   1. Follow the steps [here](https://ucb-datalab.github.io/resources/savio/#2-automated-environment-setup) until you are directed back to this page.
+
+   2. Clone this repo in your desired directory:
+
+ ```
+ git clone https://github.com/ucb-datalab/course_materials_sp2026.git
+ ```
+
+  3. Run the setup script:
+
+ ```
+ cd course_materials_sp2026
+ bash setup_savio_env.sh
+ ```
+
 ## Running Jupyter
 
 After setting up your environment, activate it and start Jupyter:
