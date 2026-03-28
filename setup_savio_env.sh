@@ -17,5 +17,7 @@ source .venv/bin/activate
 echo "Installing dependencies..."
 uv pip install -r requirements.txt
 
+python -m ipykernel install --user --name=ay128 --display-name "Python (AY128)"
+
 echo "Setup complete!"
 echo "To activate the environment, run: source .venv/bin/activate"
