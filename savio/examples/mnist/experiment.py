@@ -48,14 +48,14 @@ def plot_metrics(history):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
     ax1.plot(epochs, history['train_loss'], 'b-', label='Train Loss')
-    ax1.plot(epochs, history['test_loss'], 'r-', label='Test Loss')
+    ax1.plot(epochs, history['validation_loss'], 'r-', label='Test Loss')
     ax1.set_title('Training and Validation Loss')
     ax1.set_xlabel('Epochs')
     ax1.set_ylabel('Loss')
     ax1.legend()
 
     ax2.plot(epochs, history['train_acc'], 'b-', label='Train Accuracy')
-    ax2.plot(epochs, history['test_acc'], 'r-', label='Test Accuracy')
+    ax2.plot(epochs, history['validation_acc'], 'r-', label='Test Accuracy')
     ax2.set_title('Training and Validation Accuracy')
     ax2.set_xlabel('Epochs')
     ax2.set_ylabel('Accuracy')
