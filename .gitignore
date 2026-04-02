@@ -23,6 +23,7 @@ __pycache__/
 .coverage
 htmlcov/
 *.cover
+*/.test
 
 # Data files
 *.pkl
