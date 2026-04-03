@@ -1,3 +1,4 @@
+#!/bin/bash
 # Job name:
 #SBATCH --job-name=example_gpu_job
 #
